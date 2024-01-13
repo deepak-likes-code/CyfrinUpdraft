@@ -6,6 +6,7 @@ pragma solidity ^0.8.19;
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import {PriceConverter} from "./PriceConvertor.sol";
 
+
 // 3. Interfaces, Libraries, Contracts
 error FundMe__NotOwner();
 
@@ -21,7 +22,7 @@ contract FundMe {
 
     // State variables
     uint256 public constant MINIMUM_USD = 5 * 10 ** 18;
-    address private immutable i_owner;
+    address public immutable i_owner;
     address[] private s_funders;
     mapping(address => uint256) private s_addressToAmountFunded;
     AggregatorV3Interface private s_priceFeed;
