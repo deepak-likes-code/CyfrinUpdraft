@@ -6,7 +6,6 @@ pragma solidity ^0.8.19;
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 import {PriceConverter} from "./PriceConvertor.sol";
 
-
 // 3. Interfaces, Libraries, Contracts
 error FundMe__NotOwner();
 
@@ -84,7 +83,9 @@ contract FundMe {
         require(success);
     }
 
-    /** Getter Functions */
+    /**
+     * Getter Functions
+     */
 
     /**
      * @notice Gets the amount that an address has funded
